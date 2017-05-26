@@ -27,6 +27,7 @@ ul.btn_list {
       text-decoration: none;
       color: #000; }
 
+/******************Index********************/
 header {
   background: aqua;
   display: flex;
@@ -54,30 +55,35 @@ div.authentication {
   box-sizing: border-box;
   height: 18vh; }
 
-.Headborough-div-userinfo {
-  background-color: yellow;
-  display: flex;
+/******************Borough Page********************/
+header.Headborough-div-userinfo {
   flex-direction: row;
-  justify-content: space-between;
-  padding: 20px; }
+  justify-content: flex-start;
+  height: 15vh; }
+  header.Headborough-div-userinfo img {
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+    border-radius: 100%; }
+  header.Headborough-div-userinfo img.Borough-logo {
+    height: 90px;
+    width: 120px;
+    margin-right: auto;
+    margin-left: 0; }
 
-.Userpic {
-  height: 35px;
-  padding-right: 16px;
-  margin-top: 8px; }
+.Borough-pic {
+  height: 40vh;
+  width: 100%; }
 
-.Borough-logo {
-  height: 70px; }
+#uncontrolled-tab-example li[role="presentation"] {
+  background: #b56cb3;
+  font-size: 1.4em;
+  text-align: center; }
+  #uncontrolled-tab-example li[role="presentation"] a {
+    color: #000; }
 
-.Boruough-pic {
-  height: 40vh; }
-
-#uncontrolled-tab-example {
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: purple; }
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .tab-content > .active {
+  background: ivory; }
 
 ul.nav-tabs {
   display: flex;
@@ -86,18 +92,17 @@ ul.nav-tabs {
   ul.nav-tabs li {
     flex: 1; }
 
-.Div-Storecontent {
-  margin-bottom: 10px;
-  background: red;
-  padding: 5px; }
-  .Div-Storecontent img {
-    height: 200px;
-    width: 90%;
-    margin: auto; }
-
 .BoroughReview-div {
   margin-bottom: 10px;
-  background: green; }
+  background: aqua;
+  padding: 10px;
+  text-align: justify; }
+  .BoroughReview-div h2 {
+    font-style: italic;
+    font-size: 1.6em; }
+  .BoroughReview-div form {
+    display: flex;
+    justify-content: space-around; }
 
 @media only screen and (min-width: 769px) {
   body {
