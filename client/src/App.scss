@@ -106,27 +106,44 @@ font-size: 20px;
 background-color:purple;
 }
 
-//First tab in Mixedtab.jsx
-.Foodtab{
-  background-color:blue;
+ul.nav-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  li {
+    flex: 1;
+  }
 }
 
-//Second tab in Mixedtab.jsx
-.Nighttab{
- background-color:plum;
+.Div-Storecontent {
+  margin-bottom: 10px;
+  background: red;
+  padding: 5px;
+  img {
+    height: 200px;
+    width: 90%;
+    margin: auto;
+  }
 }
 
-//Third tab in Mixedtab.jsx
-.Retailtab{
- background-color: gold;
+.BoroughReview-div {
+  margin-bottom: 10px;
+  background: green;
 }
 
-}
+// .Div-Storecontent {
+//   display: flex;
+//   flex-direction: row;
+// }
 
-.Store-content-text{
- display: flex;
-  justify-content:justify;
-}
+// .Div-Storecontent img {
+//   height: 50px;
+// }
+
+// .Store-content-text{
+//  display: flex;
+//   justify-content:justify;
+// }
 
 //media query
 @media only screen and (min-width: 769px) {
@@ -163,6 +180,4 @@ background-color:purple;
       justify-content: center;
     }
   }
-}
-
 }
