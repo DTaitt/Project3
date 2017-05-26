@@ -79,19 +79,25 @@ div.authentication {
   font-size: 20px;
   background-color: purple; }
 
-.Foodtab {
-  background-color: blue; }
-
-.Nighttab {
-  background-color: plum; }
-
-.Retailtab {
-  background-color: gold; }
-
-.Store-content-text {
+ul.nav-tabs {
   display: flex;
-  justify-content: justify; }
+  flex-direction: row;
+  justify-content: center; }
+  ul.nav-tabs li {
+    flex: 1; }
 
+.Div-Storecontent {
+  margin-bottom: 10px;
+  background: red;
+  padding: 5px; }
+  .Div-Storecontent img {
+    height: 200px;
+    width: 90%;
+    margin: auto; }
+
+.BoroughReview-div {
+  margin-bottom: 10px;
+  background: green; }
 
 @media only screen and (min-width: 769px) {
   body {

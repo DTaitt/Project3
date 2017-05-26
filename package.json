@@ -28,6 +28,7 @@
     "express": "^4.15.3",
     "express-session": "^1.15.3",
     "morgan": "^1.8.1",
+    "node-yelp-api-v3": "^1.0.1",
     "node-yelp-v3": "^2.3.0",
     "nodemon": "^1.11.0",
     "passport": "^0.3.2",
