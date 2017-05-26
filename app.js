@@ -6,7 +6,6 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
-const Yelp = require('node-yelp-api-v3');
 
 require('dotenv').config();
 
@@ -28,30 +27,6 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
-// calling yelp data
-const yelp = new Yelp({
-  consumer_key: process.env.CONSUMER_KEY,
-  consumer_secret: process.env.CONSUMER_SECRET,
-});
-const boroughData= [];
-
-function searchLocations(borough, categories) {
-	yelp.searchBusiness({ 
-		location: borough,
-		sort_by: 'rating',
-		price: '1', 
-		categories: categories,
-	})
-		.then((yelpData) => {
-			boroughData.push(yelpData);
-			console.log(boroughData);
-		})
-}
-
-searchLocations('brooklyn', 'restaurants');
-
-// yelp.getBusinessById('gary-danko-san-francisco').then((result) => console.log(result));
-
 
 app.use(session({
   secret: process.env.SECRET_KEY,
@@ -72,6 +47,32 @@ const userRoutes = require('./routes/users')
 app.use('/api/location', locationRoutes);
 app.use('/api/location/reviews', locationRoutes);
 app.use('/auth',authRoutes);
+
+//bronx routes
+app.use('/api/location/bronxfood',locationRoutes);
+app.use('/api/location/bronxfashion',locationRoutes);
+app.use('/api/location/bronxnight',locationRoutes);
+
+//brooklyn routes
+app.use('/api/location/brooklynfood',locationRoutes);
+app.use('/api/location/brooklynfashion',locationRoutes);
+app.use('/api/location/brooklynnight',locationRoutes);
+
+//manhattan routes
+app.use('/api/location/manhattanfood',locationRoutes);
+app.use('/api/location/manhattanfashion',locationRoutes);
+app.use('/api/location/manhattannight',locationRoutes);
+
+//queens routes
+app.use('/api/location/queensfood',locationRoutes);
+app.use('/api/location/queensfashion',locationRoutes);
+app.use('/api/location/queensnight',locationRoutes);
+
+//staten island routes
+app.use('/api/location/sifood',locationRoutes);
+app.use('/api/location/sifashion',locationRoutes);
+app.use('/api/location/sinight',locationRoutes);
+
 
 app.get('*',function(req,res){
   res.status(404).send({message: 'Opps! Not found.'})

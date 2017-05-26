@@ -3,6 +3,16 @@ import {ButtonToolbar, ButtonGroup} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
 
 class Boroughreview extends Component{
+componentDidMount(){
+  function getReviews(){
+    fetch('/api/location/reviews')
+    .then((response) => {
+      console.log(response)
+      return response.json()
+    })
+  }
+}
+
 render(){
     return(
       <div className="BoroughReview-div">
