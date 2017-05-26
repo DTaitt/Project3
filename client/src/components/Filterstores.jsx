@@ -6,6 +6,31 @@ import Dropdownfilter from './Dropdownfilter.jsx';
 
   
 class Filterstores extends Component{
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     storeDataLoaded: false,
+  //     storeData: null,
+  //   }
+  // }
+
+  // componentDidMount() {
+  //   this.fetchReviewData();
+  // }
+
+  // fetchStoreData() {
+  //   fetch('http://localhost:3001/api/location/reviews')
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then((jsonRes) => {
+  //       this.setState({
+  //         reviewsLoaded: true,
+  //         reviewData: jsonRes.data.review,
+  //       })
+  //     })
+  // }
+
   render(){
    return(
       <div>
