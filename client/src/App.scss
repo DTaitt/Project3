@@ -124,30 +124,34 @@ ul.nav-tabs {
   }
 }
 
-// .Div-Storecontent {
-//   margin-bottom: 10px;
-//   background: red;
-//   padding: 5px;
-//   img {
-//     height: 200px;
-//     width: 90%;
-//     margin: auto;
-//   }
-// }
-
-// .Div-Storecontent {
-//   display: flex;
-//   flex-direction: row;
-// }
-
-// .Div-Storecontent img {
-//   height: 50px;
-// }
-
-// .Store-content-text{
-//  display: flex;
-//   justify-content:justify;
-// }
+//store content
+.Div-Storecontent {
+  margin-bottom: 10px;
+  background: aqua;
+  padding: 5px;
+  img {
+    height: 200px;
+    width: 100%;
+    margin: auto;
+  }
+  h2.store_name {
+    margin: 0;
+    line-height: 1.4em;
+    font-size: 1.6em;
+    text-align: center;
+  }
+  p {
+    margin: 15px 5px;
+    text-align: justify;
+    font-size: 1.2em;
+  }
+  p.store_address {
+    font-style: italic;
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 1.4em;
+  }
+}
 
 //boro review content
 .BoroughReview-div {
