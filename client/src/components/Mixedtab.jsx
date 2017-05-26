@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import 
 {Tabs,
   Tab} from 'react-bootstrap';
-  import {TabContent} from 'react-bootstrap';
-  import {Navtabs} from 'react-bootstrap';
+import {TabContent} from 'react-bootstrap';
+import {Navtabs} from 'react-bootstrap';
 import Dropdownfilter from './Dropdownfilter.jsx';  
 import Filterstores from './Filterstores.jsx'; 
 import Boroughreview from './Boroughreview.jsx';
@@ -27,25 +27,13 @@ class Mixedtab extends Component{
         return res.json();
       })
       .then((jsonRes) => {
-        // console.log(jsonRes.data.review);
         this.setState({
           reviewsLoaded: true,
           reviewData: jsonRes.data.review,
         })
       })
-      // console.log(this.state.reviewData)
   }
 
-  // renderReviews() {
-  //   if (this.state.reviewsLoaded) {
-  //     console.log('loaded!')
-  //     console.log(this.state.reviewData[0].name)
-  //     console.log(this.state.reviewData[0].review)
-  //     this.state.reviewData.map(function() {
-  //       return <Boroughreview />
-  //     })
-  //   }
-  // }
   render(){
     return(   
       <div className="Mixedtab">
@@ -56,13 +44,8 @@ class Mixedtab extends Component{
           <Tab eventKey={2} title="Borough Review">
           { this.state.reviewsLoaded 
             ? 
-            this.state.reviewData.map((i) => {
-              console.log(this)
-              console.log(this.state)
-              console.log(this.state.reviewData)
-              console.log(this.state.reviewData[0])
-              console.log(this.state.reviewData.location)
-              return <Boroughreview location={ this.state.reviewData[i].location } name={ this.state.reviewData[i].name } review={ this.state.reviewData[i].review } key={ Date.now() } />
+            this.state.reviewData.map((review, index) => {
+              return <Boroughreview location={ review.location } name={ review.name } review={ review.review } key={ index } />
             })
             :
             <p>LOADING...</p> }
@@ -72,4 +55,5 @@ class Mixedtab extends Component{
     )
   }
 }
+
 export default Mixedtab;
