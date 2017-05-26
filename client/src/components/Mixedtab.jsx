@@ -10,19 +10,19 @@ import Boroughreview from './Boroughreview.jsx';
 // The code for this was borowed from stack overflow. 
 class Mixedtab extends Component{
   render(){
-    return(
-        <div className="Mixedtab">
-            <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
-              <Tab eventKey={1} title="Store Info">
-                <Filterstores />
-              </Tab>
-              <Tab eventKey={2} title="Borough Review">
-                <Boroughreview />
-                <Boroughreview />
-                <Boroughreview />
-              </Tab>
-            </Tabs>
-          </div>
+    return(   
+      <div className="Mixedtab">
+        <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+          <Tab eventKey={1} title="Store Info">
+            <Filterstores />
+          </Tab>
+          <Tab eventKey={2} title="Borough Review">
+            <Boroughreview />
+            <Boroughreview />
+            <Boroughreview />
+          </Tab>
+        </Tabs>
+      </div>
     )
   }
 }
