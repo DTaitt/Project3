@@ -75,11 +75,11 @@ header.Headborough-div-userinfo {
   height: 40vh;
   width: 100%; }
 
-#uncontrolled-tab-example li[role="presentation"] {
+li[role="presentation"] {
   background: #b56cb3;
   font-size: 1.4em;
   text-align: center; }
-  #uncontrolled-tab-example li[role="presentation"] a {
+  li[role="presentation"] a {
     color: #000; }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .tab-content > .active {
@@ -92,6 +92,9 @@ ul.nav-tabs {
   ul.nav-tabs li {
     flex: 1; }
 
+div.Navthreeoptions li[role="presentation"] {
+  background: silver; }
+
 .Div-Storecontent {
   margin-bottom: 10px;
   background: aqua;
@@ -100,7 +103,7 @@ ul.nav-tabs {
     height: 200px;
     width: 100%;
     margin: auto; }
-  .Div-Storecontent h2.store_name {
+  .Div-Storecontent h1.store_name {
     margin: 0;
     line-height: 1.4em;
     font-size: 1.6em;
@@ -109,7 +112,7 @@ ul.nav-tabs {
     margin: 15px 5px;
     text-align: justify;
     font-size: 1.2em; }
-  .Div-Storecontent p.store_address {
+  .Div-Storecontent h2.store_address {
     font-style: italic;
     font-size: 1.3em;
     text-align: center;

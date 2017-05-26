@@ -100,14 +100,12 @@ width: 100%;
 }
 
 //tab styling
-#uncontrolled-tab-example{
-  li[role="presentation"] {
-    background: rgb(181, 108, 179);
-    font-size: 1.4em;
-    text-align: center;
-    a {
-      color: #000;
-    }
+li[role="presentation"] {
+  background: rgb(181, 108, 179);
+  font-size: 1.4em;
+  text-align: center;
+  a {
+    color: #000;
   }
 }
 
@@ -124,6 +122,10 @@ ul.nav-tabs {
   }
 }
 
+div.Navthreeoptions li[role="presentation"]{
+  background: silver;
+}
+
 //store content
 .Div-Storecontent {
   margin-bottom: 10px;
@@ -134,7 +136,7 @@ ul.nav-tabs {
     width: 100%;
     margin: auto;
   }
-  h2.store_name {
+  h1.store_name {
     margin: 0;
     line-height: 1.4em;
     font-size: 1.6em;
@@ -145,7 +147,7 @@ ul.nav-tabs {
     text-align: justify;
     font-size: 1.2em;
   }
-  p.store_address {
+  h2.store_address {
     font-style: italic;
     font-size: 1.3em;
     text-align: center;
