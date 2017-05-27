@@ -27,6 +27,9 @@ ul.btn_list {
       text-decoration: none;
       color: #000; }
 
+img.loading {
+  width: 100%; }
+
 /******************Index********************/
 header {
   background: aqua;

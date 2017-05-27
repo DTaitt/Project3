@@ -37,7 +37,7 @@ class Mixedtab extends Component{
   render(){
     return(   
       <div className="Mixedtab">
-        <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+        <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
           <Tab eventKey={1} title="Store Info">
             <Filterstores />
           </Tab>

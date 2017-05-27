@@ -6,29 +6,57 @@ import Dropdownfilter from './Dropdownfilter.jsx';
 
   
 class Filterstores extends Component{
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     storeDataLoaded: false,
-  //     storeData: null,
+  constructor(props) {
+    super(props);
+    this.state = {
+      storeDataLoaded: false,
+      brooklynFoodData: null,
+    }
+  }
+
+  componentDidMount() {
+    this.fetchBrooklynFoodData();
+    console.log(document.location.pathname);
+  }
+
+  fetchBrooklynFoodData() {
+    fetch('http://localhost:3001/api/location/brooklynfood')
+      .then((res) => {
+        return res.json();
+      })
+      .then((jsonRes) => {
+        this.setState({
+          storeDataLoaded: true,
+          brooklynFoodData: jsonRes.data.yelpData.businesses,
+        })
+        console.log(this.state.storeDataLoaded)
+        console.log(this.state.brooklynFoodData)
+      })
+  }
+
+  boroughCheck() {
+    if (document.location.pathname === '/brooklyn') {
+      console.log('boroughCheck is workinga')
+      // this.sendStoreData();
+      //refactor this so that it can work with sendStoreData func
+      if (this.state.storeDataLoaded) {
+        console.log('sendStoreData is working')
+        return <Storelist foodData={ this.state.brooklynFoodData } storeDataLoaded={ this.state.storeDataLoaded } />
+      } else {
+        return <img className="loading" src="img/loading.gif" /> 
+      }
+    } else {
+        return <img className="loading" src="img/loading.gif" /> 
+      }
+  }
+
+  // sendStoreData() {
+  //   if (this.state.storeDataLoaded) {
+  //     console.log('sendStoreData is working')
+  //     return <Storelist foodData={ this.state.brooklynFoodData } storeDataLoaded={ this.state.storeDataLoaded } />
+  //   } else {
+  //     return <p>LOADING ...</p>
   //   }
-  // }
-
-  // componentDidMount() {
-  //   this.fetchReviewData();
-  // }
-
-  // fetchStoreData() {
-  //   fetch('http://localhost:3001/api/location/reviews')
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((jsonRes) => {
-  //       this.setState({
-  //         reviewsLoaded: true,
-  //         reviewData: jsonRes.data.review,
-  //       })
-  //     })
   // }
 
   render(){
@@ -37,7 +65,8 @@ class Filterstores extends Component{
         <div className="Navthreeoptions">
           <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
             <Tab eventKey={1} title="Food" className="Foodtab">
-              <Storelist/>
+              { /*<Storelist foodData={ this.state.brooklynFoodData } /> */}
+              { this.boroughCheck() }
             </Tab>
             <Tab eventKey={2} title="Nightlife" className="Nighttab">
               <Storelist/> 
