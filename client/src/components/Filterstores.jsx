@@ -9,14 +9,20 @@ class Filterstores extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      storeDataLoaded: false,
+      brooklynFoodDataLoaded: false,
       brooklynFoodData: null,
+      brooklynNightDataLoaded: false,
+      brooklynNightData: null,
+      brooklynFashionDataLoaded: false,
+      brooklynFashionData: null,
     }
   }
 
   componentDidMount() {
     this.fetchBrooklynFoodData();
-    console.log(document.location.pathname);
+    this.fetchBrooklynNightData();
+    this.fetchBrooklynFashionData();
+    //console.log(document.location.pathname);
   }
 
   fetchBrooklynFoodData() {
@@ -26,34 +32,116 @@ class Filterstores extends Component{
       })
       .then((jsonRes) => {
         this.setState({
-          storeDataLoaded: true,
+          brooklynFoodDataLoaded: true,
           brooklynFoodData: jsonRes.data.yelpData.businesses,
         })
-        console.log(this.state.storeDataLoaded)
-        console.log(this.state.brooklynFoodData)
+        //console.log(this.state.brooklynFoodDataLoaded)
+        //console.log(this.state.brooklynFoodData)
       })
   }
 
-  boroughCheck() {
+  fetchBrooklynNightData() {
+    fetch('http://localhost:3001/api/location/brooklynnight')
+      .then((res) => {
+        return res.json();
+      })
+      .then((jsonRes) => {
+        this.setState({
+          brooklynNightDataLoaded: true,
+          brooklynNightData: jsonRes.data.yelpData.businesses,
+        })
+        //console.log(this.state.brooklynNightDataLoaded)
+        //console.log(this.state.brooklynNightData)
+      })
+  }
+
+  fetchBrooklynFashionData() {
+    fetch('http://localhost:3001/api/location/brooklynfashion')
+      .then((res) => {
+        return res.json();
+      })
+      .then((jsonRes) => {
+        this.setState({
+          brooklynFashionDataLoaded: true,
+          brooklynFashionData: jsonRes.data.yelpData.businesses,
+        })
+        //console.log(this.state.brooklynFashionDataLoaded)
+        //console.log(this.state.brooklynFashionData)
+      })
+  }
+
+  // fetchBrooklynFoodData() {
+  //   fetch('http://localhost:3001/api/location/brooklynfashion')
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then((jsonRes) => {
+  //       this.setState({
+  //         brooklynFoodDataLoaded: true,
+  //         brooklynFoodData: jsonRes.data.yelpData.businesses,
+  //       })
+  //       //console.log(this.state.brooklynFoodDataLoaded)
+  //       //console.log(this.state.brooklynFoodData)
+  //     })
+  // }
+
+  boroughFoodCheck() {
     if (document.location.pathname === '/brooklyn') {
-      console.log('boroughCheck is workinga')
-      // this.sendStoreData();
       //refactor this so that it can work with sendStoreData func
-      if (this.state.storeDataLoaded) {
-        console.log('sendStoreData is working')
-        return <Storelist foodData={ this.state.brooklynFoodData } storeDataLoaded={ this.state.storeDataLoaded } />
+      if (this.state.brooklynFoodDataLoaded) {
+        return (
+          <div>
+            <Storelist brooklynFoodData={ this.state.brooklynFoodData } brooklynFoodDataLoaded={ this.state.brooklynFoodDataLoaded } />
+          </div>
+        )  
       } else {
         return <img className="loading" src="img/loading.gif" /> 
       }
     } else {
+      return <img className="loading" src="img/loading.gif" /> 
+    }
+  }
+
+  boroughNightCheck() {
+    if (document.location.pathname === '/brooklyn') {
+      //refactor this so that it can work with sendStoreData func
+      if (this.state.brooklynNightDataLoaded) {
+        console.log(this.state.brooklynNightDataLoaded)
+        return (
+          <div>
+            <Storelist brooklynNightData={ this.state.brooklynNightData } brooklynNightDataLoaded={ this.state.brooklynNightDataLoaded } />
+          </div>
+        )  
+      } else {
         return <img className="loading" src="img/loading.gif" /> 
       }
+    } else {
+      return <img className="loading" src="img/loading.gif" /> 
+    }
+  }
+
+  boroughFashionCheck() {
+    if (document.location.pathname === '/brooklyn') {
+      //refactor this so that it can work with sendStoreData func
+      if (this.state.brooklynFashionDataLoaded) {
+        console.log(this.state.brooklynFashionDataLoaded)
+        return (
+          <div>
+            <Storelist brooklynFashionData={ this.state.brooklynFashionData } brooklynFashionDataLoaded={ this.state.brooklynFashionDataLoaded } />
+          </div>
+        )  
+      } else {
+        return <img className="loading" src="img/loading.gif" /> 
+      }
+    } else {
+      return <img className="loading" src="img/loading.gif" /> 
+    }
   }
 
   // sendStoreData() {
-  //   if (this.state.storeDataLoaded) {
-  //     console.log('sendStoreData is working')
-  //     return <Storelist foodData={ this.state.brooklynFoodData } storeDataLoaded={ this.state.storeDataLoaded } />
+  //   if (this.state.brooklynFoodDataLoaded) {
+  //     //console.log('sendStoreData is working')
+  //     return <Storelist foodData={ this.state.brooklynFoodData } brooklynFoodDataLoaded={ this.state.brooklynFoodDataLoaded } />
   //   } else {
   //     return <p>LOADING ...</p>
   //   }
@@ -66,13 +154,13 @@ class Filterstores extends Component{
           <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
             <Tab eventKey={1} title="Food" className="Foodtab">
               { /*<Storelist foodData={ this.state.brooklynFoodData } /> */}
-              { this.boroughCheck() }
+              { this.boroughFoodCheck() }
             </Tab>
             <Tab eventKey={2} title="Nightlife" className="Nighttab">
-              <Storelist/> 
+              { this.boroughNightCheck() }
             </Tab>
             <Tab eventKey={3} title="Fashion" className="Fashiontab">
-              <Storelist/>
+              { this.boroughFashionCheck() }
             </Tab>
           </Tabs>
         </div>

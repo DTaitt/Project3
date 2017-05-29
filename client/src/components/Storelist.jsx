@@ -4,13 +4,13 @@ import Storecontent from './Storecontent.jsx';
 import Dropdownfilter from './Dropdownfilter.jsx';
 
 class Storelist extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      storeDataLoaded: false,
-      brooklynFoodData: null,
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     brooklynFoodDataLoaded: false,
+  //     brooklynFoodData: null,
+  //   }
+  // }
 
   // componentDidMount() {
   //   this.fetchBrooklynFoodData();
@@ -24,7 +24,7 @@ class Storelist extends Component{
   //     })
   //     .then((jsonRes) => {
   //       this.setState({
-  //         storeDataLoaded: true,
+  //         brooklynFoodDataLoaded: true,
   //         brooklynFoodData: jsonRes.data.yelpData.businesses,
   //       })
   //       // console.log(this.state.brooklynFoodData)
@@ -36,24 +36,33 @@ class Storelist extends Component{
       <div className="Storelist">
         <Dropdownfilter />
         <div className="Inner-div-store-content">
-        { /*this.state.storeDataLoaded 
+            {/* brooklyn food data */}
+            { this.props.brooklynFoodDataLoaded 
             ? 
-            this.state.brooklynFoodData.map((store, index) => {
+            this.props.brooklynFoodData.map((store, index) => {
               // console.log(store)
               return <Storecontent name={ store.name } img={ store.image_url } location={ store.location.address1 } city={ store.location.city } key={ index } />
             })
             :
-            <p>LOADING...</p>*/ }
-            { this.props.storeDataLoaded 
+            console.log('NOT LOADED')  } 
+          {/* brooklyn night data */}
+            { this.props.brooklynNightDataLoaded 
             ? 
-            this.props.foodData.map((store, index) => {
-              console.log(store)
+            this.props.brooklynNightData.map((store, index) => {
+              // console.log(store)
               return <Storecontent name={ store.name } img={ store.image_url } location={ store.location.address1 } city={ store.location.city } key={ index } />
             })
             :
-            <img className="loading" src="img/loading.gif" /> }  
-            { console.log(this.props.foodData) }
-            { console.log(this.props.storeDataLoaded) }
+            console.log('NOT LOADED')  } 
+            {/* brooklyn fashion data */}
+            { this.props.brooklynFashionDataLoaded 
+            ? 
+            this.props.brooklynFashionData.map((store, index) => {
+              // console.log(store)
+              return <Storecontent name={ store.name } img={ store.image_url } location={ store.location.address1 } city={ store.location.city } key={ index } />
+            })
+            :
+            console.log('NOT LOADED')  }  
         </div>
       </div>
     );
