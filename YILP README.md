@@ -28,14 +28,31 @@
 ### General Approach 
 
 To begin our project we came up with three ideas, had a group discussion, and chose what we felt was the most promising idea. As a general approach we decided to delegate tasked based on what each individual felt strong/comfortable with. The backend (Express Work) was handled first, while the frontend ( React and Styling) was worked on in segments. As a group dynamic we possessed a jovial and professional  dynamic filled with lots of interpersonal communication. During the initial stages of this project one of the group members took it upon himself to create a slack channel and google drive to help us stay organized. This played a major role of keeping us on track with our project. It has definitely been a wonderful learning experience collaborating with the individuals in our group and we hope to continue working on this app to make the initial vision come to life.
+
  
 ### Technologies Used: 
 
- - Node: Express<br>
+- Node: Express<br>
 - CSS: SASS,Bootstraps,Flexbox<br>
- - Postgress<br>
+- Postgress<br>
 - React<br>
- 
+
+
+### Dependencies
+
+#### Package.json Inside Client Folder
+
+<img width="838" alt="screen shot 2017-05-29 at 3 24 34 pm" src="https://git.generalassemb.ly/storage/user/5655/files/0bc51532-4483-11e7-9483-edc9f7da598b">
+
+#### Our Other package.json 
+
+
+<img width="677" alt="screen shot 2017-05-29 at 3 26 54 pm" src="https://git.generalassemb.ly/storage/user/5655/files/c22b1844-4483-11e7-85cf-bd8ea747a624">
+
+<img width="665" alt="screen shot 2017-05-29 at 3 27 18 pm" src="https://git.generalassemb.ly/storage/user/5655/files/a7b43afe-4483-11e7-8724-6cff310fb87b">
+
+
+
 ### Additional Resources
 
 - [ Our YILP Board](https://github.com/Jpichardo163/Project3/projects/1)
