@@ -6,6 +6,12 @@
 
 ### YILP is a simple web application built for tourist and individual moving to NYC who need an easy way to explore restaurants, find shopping locations, and discover nightlife within the five boroughs of New York City. We believe that by giving users the option to not only rate the locations in which they shop, but the area as well, we will achieve a high rate of user interaction. 
 
+
+### General Approach 
+
+To begin our project we came up with three ideas, had a group discussion, and chose what we felt was the most promising idea. As a general approach we decided to delegate tasked based on what each individual felt strong/comfortable with. The backend (Express Work) was handled first, while the frontend ( React and Styling) was worked on in segments. As a group dynamic we possessed a jovial and professional  dynamic filled with lots of interpersonal communication. During the initial stages of this project one of the group members took it upon himself to create a slack channel and google drive to help us stay organized. This played a major role of keeping us on track with our project. It has definitely been a wonderful learning experience collaborating with the individuals in our group and we hope to continue working on this app to make the initial vision come to life.
+
+
 ### Yelp API Call Snippets
 
 #### React Snippet
@@ -25,12 +31,9 @@
 
 <img width="414" alt="screen shot 2017-05-29 at 11 19 34 am" src="https://git.generalassemb.ly/storage/user/5655/files/132424fc-446b-11e7-9d25-1f72f80883c5">
 
-### General Approach 
 
-To begin our project we came up with three ideas, had a group discussion, and chose what we felt was the most promising idea. As a general approach we decided to delegate tasked based on what each individual felt strong/comfortable with. The backend (Express Work) was handled first, while the frontend ( React and Styling) was worked on in segments. As a group dynamic we possessed a jovial and professional  dynamic filled with lots of interpersonal communication. During the initial stages of this project one of the group members took it upon himself to create a slack channel and google drive to help us stay organized. This played a major role of keeping us on track with our project. It has definitely been a wonderful learning experience collaborating with the individuals in our group and we hope to continue working on this app to make the initial vision come to life.
 
- 
-### Technologies Used: 
+### Technologies Used / Dependencies: 
 
 - Node: Express<br>
 - CSS: SASS,Bootstraps,Flexbox<br>
@@ -38,7 +41,7 @@ To begin our project we came up with three ideas, had a group discussion, and ch
 - React<br>
 
 
-### Dependencies
+ Dependencies
 
 #### Package.json Inside Client Folder
 
@@ -52,6 +55,7 @@ To begin our project we came up with three ideas, had a group discussion, and ch
 <img width="665" alt="screen shot 2017-05-29 at 3 27 18 pm" src="https://git.generalassemb.ly/storage/user/5655/files/a7b43afe-4483-11e7-8724-6cff310fb87b">
 
 
+ 
 
 ### Additional Resources
 
