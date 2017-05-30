@@ -21,7 +21,7 @@ class Filterstores extends Component{
     this.fetchBrooklynFoodData();
     this.fetchBrooklynNightData();
     this.fetchBrooklynFashionData();
-    //console.log(document.location.pathname);
+    ////console.log(document.location.pathname);
   }
 
   fetchBrooklynFoodData() {
@@ -34,8 +34,8 @@ class Filterstores extends Component{
           brooklynFoodDataLoaded: true,
           brooklynFoodData: jsonRes.data.yelpData.businesses,
         })
-        //console.log(this.state.brooklynFoodDataLoaded)
-        //console.log(this.state.brooklynFoodData)
+        ////console.log(this.state.brooklynFoodDataLoaded)
+        ////console.log(this.state.brooklynFoodData)
       })
   }
 
@@ -49,8 +49,8 @@ class Filterstores extends Component{
           brooklynNightDataLoaded: true,
           brooklynNightData: jsonRes.data.yelpData.businesses,
         })
-        //console.log(this.state.brooklynNightDataLoaded)
-        //console.log(this.state.brooklynNightData)
+        ////console.log(this.state.brooklynNightDataLoaded)
+        ////console.log(this.state.brooklynNightData)
       })
   }
 
@@ -64,8 +64,8 @@ class Filterstores extends Component{
           brooklynFashionDataLoaded: true,
           brooklynFashionData: jsonRes.data.yelpData.businesses,
         })
-        //console.log(this.state.brooklynFashionDataLoaded)
-        //console.log(this.state.brooklynFashionData)
+        ////console.log(this.state.brooklynFashionDataLoaded)
+        ////console.log(this.state.brooklynFashionData)
       })
   }
 
@@ -79,8 +79,8 @@ class Filterstores extends Component{
   //         brooklynFoodDataLoaded: true,
   //         brooklynFoodData: jsonRes.data.yelpData.businesses,
   //       })
-  //       //console.log(this.state.brooklynFoodDataLoaded)
-  //       //console.log(this.state.brooklynFoodData)
+  //       ////console.log(this.state.brooklynFoodDataLoaded)
+  //       ////console.log(this.state.brooklynFoodData)
   //     })
   // }
 
@@ -105,7 +105,7 @@ class Filterstores extends Component{
     if (document.location.pathname === '/brooklyn') {
       //refactor this so that it can work with sendStoreData func
       if (this.state.brooklynNightDataLoaded) {
-        console.log(this.state.brooklynNightDataLoaded)
+        //console.log(this.state.brooklynNightDataLoaded)
         return (
           <div>
             <Storelist brooklynNightData={ this.state.brooklynNightData } brooklynNightDataLoaded={ this.state.brooklynNightDataLoaded } />
@@ -123,7 +123,7 @@ class Filterstores extends Component{
     if (document.location.pathname === '/brooklyn') {
       //refactor this so that it can work with sendStoreData func
       if (this.state.brooklynFashionDataLoaded) {
-        console.log(this.state.brooklynFashionDataLoaded)
+        //console.log(this.state.brooklynFashionDataLoaded)
         return (
           <div>
             <Storelist brooklynFashionData={ this.state.brooklynFashionData } brooklynFashionDataLoaded={ this.state.brooklynFashionDataLoaded } />
@@ -139,7 +139,7 @@ class Filterstores extends Component{
 
   // sendStoreData() {
   //   if (this.state.brooklynFoodDataLoaded) {
-  //     //console.log('sendStoreData is working')
+  //     ////console.log('sendStoreData is working')
   //     return <Storelist foodData={ this.state.brooklynFoodData } brooklynFoodDataLoaded={ this.state.brooklynFoodDataLoaded } />
   //   } else {
   //     return <p>LOADING ...</p>
