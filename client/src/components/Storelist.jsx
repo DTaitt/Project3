@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 import Storecontent from './Storecontent.jsx';
-import Dropdownfilter from './Dropdownfilter.jsx';
 
 class Storelist extends Component{
   // constructor(props) {
@@ -34,14 +33,13 @@ class Storelist extends Component{
   render(){
     return(
       <div className="Storelist">
-        <Dropdownfilter />
         <div className="Inner-div-store-content">
             {/* brooklyn food data */}
             { this.props.brooklynFoodDataLoaded 
             ? 
             this.props.brooklynFoodData.map((store, index) => {
               // console.log(store)
-              return <Storecontent name={ store.name } img={ store.image_url } location={ store.location.address1 } city={ store.location.city } key={ index } />
+              return <Storecontent name={ store.name } img={ store.image_url } location={ store.location.address1 } city={ store.location.city } phone={ store.display_phone } review_count={ store.review_count } key={ index } />
             })
             :
             console.log('NOT LOADED')  } 
@@ -50,7 +48,7 @@ class Storelist extends Component{
             ? 
             this.props.brooklynNightData.map((store, index) => {
               // console.log(store)
-              return <Storecontent name={ store.name } img={ store.image_url } location={ store.location.address1 } city={ store.location.city } key={ index } />
+              return <Storecontent name={ store.name } img={ store.image_url } location={ store.location.address1 } city={ store.location.city } phone={ store.display_phone } review_count={ store.review_count } key={ index } />
             })
             :
             console.log('NOT LOADED')  } 
@@ -59,7 +57,7 @@ class Storelist extends Component{
             ? 
             this.props.brooklynFashionData.map((store, index) => {
               // console.log(store)
-              return <Storecontent name={ store.name } img={ store.image_url } location={ store.location.address1 } city={ store.location.city } key={ index } />
+              return <Storecontent name={ store.name } img={ store.image_url } location={ store.location.address1 } city={ store.location.city } phone={ store.display_phone } review_count={ store.review_count } key={ index } />
             })
             :
             console.log('NOT LOADED')  }  

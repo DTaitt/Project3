@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Tabs,Tab} from 'react-bootstrap';
 import Storelist from './Storelist.jsx';
-import Dropdownfilter from './Dropdownfilter.jsx';
 
 
   
@@ -26,7 +25,7 @@ class Filterstores extends Component{
   }
 
   fetchBrooklynFoodData() {
-    fetch('http://localhost:3001/api/location/brooklynfood')
+    fetch('api/location/brooklynfood')
       .then((res) => {
         return res.json();
       })
@@ -41,7 +40,7 @@ class Filterstores extends Component{
   }
 
   fetchBrooklynNightData() {
-    fetch('http://localhost:3001/api/location/brooklynnight')
+    fetch('api/location/brooklynnight')
       .then((res) => {
         return res.json();
       })
@@ -56,7 +55,7 @@ class Filterstores extends Component{
   }
 
   fetchBrooklynFashionData() {
-    fetch('http://localhost:3001/api/location/brooklynfashion')
+    fetch('api/location/brooklynfashion')
       .then((res) => {
         return res.json();
       })
@@ -71,7 +70,7 @@ class Filterstores extends Component{
   }
 
   // fetchBrooklynFoodData() {
-  //   fetch('http://localhost:3001/api/location/brooklynfashion')
+  //   fetch('api/location/brooklynfashion')
   //     .then((res) => {
   //       return res.json();
   //     })

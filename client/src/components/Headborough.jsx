@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Images, Image} from 'react-bootstrap';
 
 class Headborough extends Component {
   render(){

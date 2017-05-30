@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 
 //importing Three options which are Food, Night,Reatil
 
-import Filterstores  from './Filterstores.jsx';
-
 import Headborough from './Headborough.jsx';
 
 import Mixedtab from './Mixedtab.jsx';

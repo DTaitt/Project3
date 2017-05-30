@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {ButtonToolbar, ButtonGroup} from 'react-bootstrap';
-import {Button} from 'react-bootstrap';
 
 class Boroughreview extends Component{
 render(){

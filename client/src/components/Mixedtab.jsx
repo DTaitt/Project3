@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import 
 {Tabs,
   Tab} from 'react-bootstrap';
-import {TabContent} from 'react-bootstrap';
-import {Navtabs} from 'react-bootstrap';
-import Dropdownfilter from './Dropdownfilter.jsx';  
 import Filterstores from './Filterstores.jsx'; 
 import Boroughreview from './Boroughreview.jsx';
 // The code for this was borowed from stack overflow. 
